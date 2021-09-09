@@ -60,3 +60,76 @@ let team2 = ['Valeria', 'Valentina', 'Carolina']
 let education = ['David', ...team1, ...team2]
 
 console.log(education)
+
+{
+    var globalVar = "global var";
+}
+
+{
+    let globalLet = "global Let";
+    console.log(globalLet)
+}
+
+console.log(globalVar)
+
+const a = "b";
+a = 'a';
+console.log(a)
+
+let nombre = 'Omar';
+let age = 24
+
+//es5
+obj = {name: nombre, edad: age};
+
+//es6
+obj2 = {nombre, age};
+console.log(obj2)
+
+const names = [
+    {
+        name:'Omar',
+        age:24,
+    },
+    {
+        name:'Pedro',
+        age:30,
+    },
+    {
+        name:'Carolina',
+        age:23,
+    }
+]
+let listofnames = names.map(
+    function(item){
+        console.log(item.name)
+    }
+)
+
+let listOfnames2 = names.map(
+    item => console.log(item.name)
+);
+
+const listOfnames3 = (name,age,country)  => {
+    ...
+}
+
+const listOfnames4 = name => {
+    ...
+}
+
+const square = num => num * num;
+
+console.log(square(2));
+
+//Promesas
+
+const hellowPromise = () =>{
+    return new Promise(resolve, reject) => {
+        if(true){
+            resolve('Hey!')
+        }else{
+            reject('Ups!')
+        }
+    }
+}
