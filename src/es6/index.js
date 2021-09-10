@@ -111,11 +111,11 @@ let listOfnames2 = names.map(
 );
 
 const listOfnames3 = (name,age,country)  => {
-    ...
+    console.log()
 }
 
 const listOfnames4 = name => {
-    ...
+    console.log()
 }
 
 const square = num => num * num;
@@ -125,11 +125,49 @@ console.log(square(2));
 //Promesas
 
 const hellowPromise = () =>{
-    return new Promise(resolve, reject) => {
-        if(true){
+    return new Promise((resolve, reject) => {
+        if(false){
             resolve('Hey!')
         }else{
             reject('Ups!')
         }
+    })
+}
+
+hellowPromise()
+.then(response => console.log(response))
+.catch(error => console.log(error))
+//Clases
+class calculator{
+    constructor(){
+        this.valuA = 0
+        this.valueB = 0
+    }   
+    sum(valueA, valueB){
+        this.valuA = valueA
+        this.valueB = valueB
+        return this.valuA + this.valueB;
     }
 }
+
+//Modulos
+const call = new calculator()
+console.log(call.sum(2,2))
+
+import { hello } from './module'
+
+hello()
+//Generadores
+function* helloWorld(){
+    if(true){
+        yield 'hellow, ';
+    }
+    if(true){
+        yield 'World';
+    }
+};
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
